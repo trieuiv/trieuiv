@@ -102,7 +102,11 @@ rules:
   - 'DOMAIN-KEYWORD,/ptracking,REJECT'
   - 'DOMAIN-KEYWORD,/api/stats/,REJECT'
 
-  # 5. Route YouTube qua Proxy (để hưởng YouTube Premium VN)
+  # 5. Chặn QUIC/UDP để force TCP (tăng hiệu quả chặn ads)
+  - 'AND,((DOMAIN-SUFFIX,googlevideo.com),(NETWORK,udp)),REJECT'
+  - 'AND,((DOMAIN,youtubei.googleapis.com),(NETWORK,udp)),REJECT'
+
+  # 6. Route YouTube qua Proxy (để hưởng YouTube Premium VN)
   - 'DOMAIN-SUFFIX,youtube.com,Proxy'
   - 'DOMAIN-SUFFIX,youtu.be,Proxy'
   - 'DOMAIN-SUFFIX,ytimg.com,Proxy'
@@ -113,5 +117,9 @@ rules:
   - 'DOMAIN-SUFFIX,yt3.googleusercontent.com,Proxy'
   - 'DOMAIN-KEYWORD,youtube,Proxy'
 
-  # 6. Mọi traffic khác - kết nối trực tiếp
+  # 7. Chặn thêm domain quảng cáo Google
+  - 'DOMAIN-SUFFIX,adsense.google.com,REJECT'
+  - 'DOMAIN-SUFFIX,adservice.google.com,REJECT'
+
+  # 8. Mọi traffic khác - kết nối trực tiếp
   - 'MATCH,DIRECT'
