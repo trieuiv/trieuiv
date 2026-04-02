@@ -30,7 +30,7 @@ proxies:
     name: '🇻🇳Youtube Premium Public HCM'
     type: ss
     server: hcm.fzpn.net
-    port: 117
+    port: 116
     cipher: 2022-blake3-aes-256-gcm
     password: 'YghWY4stNd9HIQlolHMpxk90iXGtNKVuELK5Tn1F2kk=:YzdhNDU3ZTUtY2YyZi01MzUwLTg5MTktYjcyNTU0N2Y='
     udp: true
@@ -79,8 +79,13 @@ rules:
   # 1. Panel quản lý - kết nối trực tiếp
   - 'DOMAIN,panel.fuzzypn.me,DIRECT'
 
+  - 'RULE-SET,ads,REJECT'
+
   # 2. Chặn quảng cáo tổng quát (GeoSite)
   - 'GEOSITE,category-ads-all,REJECT'
+
+  - 'GEOIP,VN,DIRECT'
+  - 'GEOIP,!VN,Proxy'
 
   # 3. Chặn các domain quảng cáo Google/YouTube cụ thể
   - 'DOMAIN-SUFFIX,doubleclick.net,REJECT'
@@ -122,4 +127,13 @@ rules:
   - 'DOMAIN-SUFFIX,adservice.google.com,REJECT'
 
   # 8. Mọi traffic khác - kết nối trực tiếp
-  - 'MATCH,DIRECT'
+  - 'MATCH,Proxy'
+
+rule-providers:
+  ads:
+    type: http
+    behavior: domain
+    format: text
+    path: ./rules/ads.txt
+    url: 'https://panel.fuzzypn.me/rules/clash/ads.txt'
+    interval: 86400
