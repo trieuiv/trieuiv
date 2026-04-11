@@ -27,6 +27,54 @@ dns:
       - 0.0.0.0/32
 proxies:
   -
+    name: '🇻🇳HCM Direct U'
+    type: ss
+    server: 157.10.53.138
+    port: 80
+    cipher: 2022-blake3-aes-256-gcm
+    password: 'vUZi6KM7OSPNlpJx/HcEV7mF98CAF6O3WeKt5Q2de3I=:YzdhNDU3ZTUtY2YyZi01MzUwLTg5MTktYjcyNTU0N2Y='
+    udp: true
+  -
+    name: 🇯🇵Sakura
+    type: ss
+    server: 160.16.145.170
+    port: 30011
+    cipher: 2022-blake3-aes-256-gcm
+    password: 'vUZi6KM7OSPNlpJx/HcEV7mF98CAF6O3WeKt5Q2de3I=:YzdhNDU3ZTUtY2YyZi01MzUwLTg5MTktYjcyNTU0N2Y='
+    udp: true
+  -
+    name: '🇻🇳VN HoT'
+    type: ss
+    server: 103.77.215.57
+    port: 444
+    cipher: 2022-blake3-aes-256-gcm
+    password: 'YghWY4stNd9HIQlolHMpxk90iXGtNKVuELK5Tn1F2kk=:YzdhNDU3ZTUtY2YyZi01MzUwLTg5MTktYjcyNTU0N2Y='
+    udp: true
+  -
+    name: '🇻🇳VNDT 175'
+    type: ss
+    server: 160.25.81.175
+    port: 443
+    cipher: 2022-blake3-aes-256-gcm
+    password: 'gKDA5vIUmCdht4JE1olI1s6KAunc5uYxwPO+UrvcMR4=:YzdhNDU3ZTUtY2YyZi01MzUwLTg5MTktYjcyNTU0N2Y='
+    udp: true
+  -
+    name: '🇻🇳VNDT 63'
+    type: ss
+    server: 103.147.122.63
+    port: 443
+    cipher: 2022-blake3-aes-256-gcm
+    password: 'vUZi6KM7OSPNlpJx/HcEV7mF98CAF6O3WeKt5Q2de3I=:YzdhNDU3ZTUtY2YyZi01MzUwLTg5MTktYjcyNTU0N2Y='
+    udp: true
+  -
+    name: '🇻🇳VNDT 64'
+    type: ss
+    server: 103.147.122.64
+    port: 443
+    cipher: 2022-blake3-aes-256-gcm
+    password: 'CWz67JDM3yWqKZ3iskTF+IZWBK6ad5fhxVmd5nU2myM=:YzdhNDU3ZTUtY2YyZi01MzUwLTg5MTktYjcyNTU0N2Y='
+    udp: true
+  -
     name: '🇻🇳YTB Pre Public 01'
     type: ss
     server: hn.fzpn.net
@@ -49,12 +97,24 @@ proxy-groups:
     proxies:
       - Auto
       - 'Fault transfer'
+      - '🇻🇳HCM Direct U'
+      - 🇯🇵Sakura
+      - '🇻🇳VN HoT'
+      - '🇻🇳VNDT 175'
+      - '🇻🇳VNDT 63'
+      - '🇻🇳VNDT 64'
       - '🇻🇳YTB Pre Public 01'
       - '🇻🇳YTB Pre Public 02'
   -
     name: Auto
     type: url-test
     proxies:
+      - '🇻🇳HCM Direct U'
+      - 🇯🇵Sakura
+      - '🇻🇳VN HoT'
+      - '🇻🇳VNDT 175'
+      - '🇻🇳VNDT 63'
+      - '🇻🇳VNDT 64'
       - '🇻🇳YTB Pre Public 01'
       - '🇻🇳YTB Pre Public 02'
     url: 'http://www.gstatic.com/generate_204'
@@ -63,6 +123,12 @@ proxy-groups:
     name: 'Fault transfer'
     type: fallback
     proxies:
+      - '🇻🇳HCM Direct U'
+      - 🇯🇵Sakura
+      - '🇻🇳VN HoT'
+      - '🇻🇳VNDT 175'
+      - '🇻🇳VNDT 63'
+      - '🇻🇳VNDT 64'
       - '🇻🇳YTB Pre Public 01'
       - '🇻🇳YTB Pre Public 02'
     url: 'http://www.gstatic.com/generate_204'
@@ -73,6 +139,11 @@ proxy-groups:
     url: 'http://www.gstatic.com/generate_204'
     interval: 300
     proxies:
+      - '🇻🇳HCM Direct U'
+      - '🇻🇳VN HoT'
+      - '🇻🇳VNDT 175'
+      - '🇻🇳VNDT 63'
+      - '🇻🇳VNDT 64'
       - '🇻🇳YTB Pre Public 01'
       - '🇻🇳YTB Pre Public 02'
 rules:
