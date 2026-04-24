@@ -35,6 +35,14 @@ proxies:
     password: 'vUZi6KM7OSPNlpJx/HcEV7mF98CAF6O3WeKt5Q2de3I=:YzdhNDU3ZTUtY2YyZi01MzUwLTg5MTktYjcyNTU0N2Y='
     udp: true
   -
+    name: 🇭🇰HKT
+    type: ss
+    server: hkt3.fzpn.net
+    port: 8443
+    cipher: aes-256-gcm
+    password: 02nlZl79s9SsED2UweZholteBTAKLfYoisNgOrQENZs=
+    udp: true
+  -
     name: '🇯🇵Oracle 71'
     type: ss
     server: 131.186.35.71
@@ -106,6 +114,7 @@ proxy-groups:
       - Auto
       - 'Fault transfer'
       - '🇻🇳HCM Direct U'
+      - 🇭🇰HKT
       - '🇯🇵Oracle 71'
       - '🇻🇳Public 01'
       - '🇻🇳Public 02'
@@ -119,6 +128,7 @@ proxy-groups:
     type: url-test
     proxies:
       - '🇻🇳HCM Direct U'
+      - 🇭🇰HKT
       - '🇯🇵Oracle 71'
       - '🇻🇳Public 01'
       - '🇻🇳Public 02'
@@ -134,6 +144,7 @@ proxy-groups:
     type: fallback
     proxies:
       - '🇻🇳HCM Direct U'
+      - 🇭🇰HKT
       - '🇯🇵Oracle 71'
       - '🇻🇳Public 01'
       - '🇻🇳Public 02'
