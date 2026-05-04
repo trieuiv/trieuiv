@@ -83,6 +83,23 @@ proxies:
     password: 'YghWY4stNd9HIQlolHMpxk90iXGtNKVuELK5Tn1F2kk=:YzdhNDU3ZTUtY2YyZi01MzUwLTg5MTktYjcyNTU0N2Y='
     udp: true
   -
+    name: '🇻🇳VN Inet'
+    type: vless
+    server: 202.92.7.136
+    port: '11091'
+    uuid: c7a457e5-cf2f-5350-8919-b725547fb0dc
+    network: tcp
+    tls: true
+    udp: true
+    flow: xtls-rprx-vision
+    servername: swdist.apple.com
+    grpc-opts:
+      grpc-service-name: ''
+    reality-opts:
+      public-key: TotdwGfJCB6NOnXEMMhuGWRbEPSYIUv1d8NYFcPltWU
+      short-id: 0123456789abcdef
+    client-fingerprint: chrome
+  -
     name: '🇻🇳VNDT 175'
     type: ss
     server: 160.25.81.175
@@ -120,6 +137,7 @@ proxy-groups:
       - '🇻🇳Public 02'
       - 🇯🇵Sakura
       - '🇻🇳VN HoT'
+      - '🇻🇳VN Inet'
       - '🇻🇳VNDT 175'
       - '🇻🇳VNDT 63'
       - '🇻🇳VNDT 64'
@@ -134,6 +152,7 @@ proxy-groups:
       - '🇻🇳Public 02'
       - 🇯🇵Sakura
       - '🇻🇳VN HoT'
+      - '🇻🇳VN Inet'
       - '🇻🇳VNDT 175'
       - '🇻🇳VNDT 63'
       - '🇻🇳VNDT 64'
@@ -150,6 +169,7 @@ proxy-groups:
       - '🇻🇳Public 02'
       - 🇯🇵Sakura
       - '🇻🇳VN HoT'
+      - '🇻🇳VN Inet'
       - '🇻🇳VNDT 175'
       - '🇻🇳VNDT 63'
       - '🇻🇳VNDT 64'
@@ -165,6 +185,7 @@ proxy-groups:
       - '🇻🇳Public 01'
       - '🇻🇳Public 02'
       - '🇻🇳VN HoT'
+      - '🇻🇳VN Inet'
       - '🇻🇳VNDT 175'
       - '🇻🇳VNDT 63'
       - '🇻🇳VNDT 64'
