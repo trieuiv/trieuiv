@@ -77,7 +77,7 @@ proxies:
   -
     name: '🇻🇳VN HoT'
     type: ss
-    server: 103.77.215.57
+    server: 103.77.215.70
     port: 444
     cipher: 2022-blake3-aes-256-gcm
     password: 'YghWY4stNd9HIQlolHMpxk90iXGtNKVuELK5Tn1F2kk=:YzdhNDU3ZTUtY2YyZi01MzUwLTg5MTktYjcyNTU0N2Y='
